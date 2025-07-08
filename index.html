@@ -1,12 +1,51 @@
 
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>MortgageAi - סימולטור משכנתא</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משכנתא AI - סימולטור</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ברוך הבא לסימולטור MortgageAi</h1>
-    <p>המערכת באוויר! עכשיו אפשר להתחיל לבנות פונקציונליות.</p>
+    <header>
+        <h1>סימולטור משכנתא AI</h1>
+        <p>כלי מקצועי לחישוב מותאם אישית</p>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>פרטי הלקוח</h2>
+            <form id="mortgageForm">
+                <label>שם מלא <input type="text" required></label>
+                <label>גיל <input type="number" min="18" max="80" required></label>
+                <label>מצב משפחתי 
+                    <select>
+                        <option>רווק/ה</option>
+                        <option>נשוי/אה</option>
+                        <option>גרוש/ה</option>
+                    </select>
+                </label>
+                <label>מספר ילדים <input type="number" min="0"></label>
+
+                <h2>מצב כלכלי</h2>
+                <label>הכנסה חודשית שלך <input type="number" value="0"></label>
+                <label>הכנסת בן/בת זוג <input type="number" value="0"></label>
+                <label>הון עצמי <input type="number" value="0"></label>
+                <label>חובות קיימים <input type="number" value="0"></label>
+
+                <h2>משכנתא</h2>
+                <label>סכום משכנתא רצוי <input type="number" required></label>
+                <label>מספר שנים <input type="number" required></label>
+                <label>ריבית משוערת (%) <input type="number" step="0.01" required></label>
+
+                <button type="submit">חשב החזר חודשי</button>
+            </form>
+            <div id="results"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Mortgage AI</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
